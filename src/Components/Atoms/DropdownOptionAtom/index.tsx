@@ -4,7 +4,7 @@ interface AccountOption {
 
 function DropdownOptionAtom ({accountOption}: AccountOption) {
     return (
-        <option value="">{accountOption}</option>
+        <option>{accountOption}</option>
     )
 }
 
