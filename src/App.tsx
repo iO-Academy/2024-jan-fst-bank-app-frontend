@@ -1,11 +1,11 @@
 import './App.css'
-import BackButtonAtom from "./Components/Atoms/BackButtonAtom";
+import Dropdown from "./Components/Atoms/Dropdown";
 
 function App() {
 
     return (
         <>
-            <BackButtonAtom value={'⇦'} />
+            <Dropdown valueName={'Select an account'} valueOptions1={'savings account'} valueOptions2={'current'} />
         </>
     )
 }
