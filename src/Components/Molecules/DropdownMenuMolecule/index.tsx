@@ -11,11 +11,11 @@ function DropdownMolecule(props: DropdownProps) {
     return (
         <>
             <div className={"flex justify-center"}>
-            <select name="" id=""
+                <select
                     className={"rounded-md bg-emerald-500 border-1 border border-emerald-900 text-white p-2 m-" + margin}>
-                <option selected disabled value="">Select an account</option>
-                {accounts.map(account => <DropdownOptionAtom accountOption={account} />)}
-            </select>
+                    <option selected disabled value="">Select an account</option>
+                    {accounts.map(account => <DropdownOptionAtom accountOption={account}/>)}
+                </select>
             </div>
         </>
     )
