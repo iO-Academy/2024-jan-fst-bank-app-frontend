@@ -566,8 +566,20 @@ video {
   display: flex;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.content-center {
+  align-content: center;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-items-center {
+  justify-items: center;
 }
 
 .rounded-md {
