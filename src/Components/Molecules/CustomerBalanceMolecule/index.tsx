@@ -1,7 +1,6 @@
 import {useState} from "react";
 import {useEffect} from "react";
 import AccountBalanceAtom from "../../Atoms/AccountBalanceAtom";
-import TextBoxAtom from "../../Atoms/TextAtom";
 
 function CustomerBalance() {
 
@@ -20,7 +19,7 @@ function CustomerBalance() {
     }
     return (
         <>
-            <AccountBalanceAtom balanceValue={accountInfo.balance}/>
+            <AccountBalanceAtom accountType={getAccountInfo.account_type} balanceValue={getAccountInfo.balance} />
         </>
     )
 }

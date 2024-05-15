@@ -4,7 +4,7 @@ interface AccountBalanceProp {
     customerLabel?: string
 }
 
-function AccountBalanceAtom(props: AccountBalanceProp) {
+function AccountInfoAtom(props: AccountBalanceProp) {
     const {accountType, balanceValue, customerLabel} = props
     return (
         <>
@@ -20,4 +20,4 @@ function AccountBalanceAtom(props: AccountBalanceProp) {
     )
 }
 
-export default AccountBalanceAtom
+export default AccountInfoAtom
