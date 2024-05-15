@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {useEffect} from "react";
-import AccountBalanceAtom from "../Atoms/AccountBalanceAtom";
+import AccountBalanceAtom from "../../Atoms/AccountBalanceAtom";
 
 const [accountBalance, setAccountBalance] = useState(0)
 const getAccountBalance = () => {
