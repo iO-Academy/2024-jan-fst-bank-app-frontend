@@ -19,7 +19,7 @@ function CustomerBalance() {
     }
     return (
         <>
-            <AccountBalanceAtom balanceValue={accountInfo.balance}/>
+            <AccountBalanceAtom accountType={getAccountInfo.account_type} balanceValue={getAccountInfo.balance} />
         </>
     )
 }
