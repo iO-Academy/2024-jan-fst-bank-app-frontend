@@ -1,24 +1,26 @@
 import {useState} from "react";
 import {useEffect} from "react";
 import AccountBalanceAtom from "../../Atoms/AccountBalanceAtom";
+import TextBoxAtom from "../../Atoms/TextAtom";
 
 function CustomerBalance() {
 
-    const [accountBalance, setAccountBalance] = useState(0)
-    const getAccountBalance = () => {
+    const [accountInfo, setAccountInfo] = useState(0)
+    const getAccountInfo = () => {
         fetch()
             .then(response => response.json())
-            .then(customerBalance => {
-                setAccountBalance(customerBalance.balance)
+            .then(accountInformation => {
+                setAccountInfo(accountInformation)
+
             })
 
-        useEffect(getAccountBalance, [])
+        useEffect(getAccountInfo, [])
 
 
     }
     return (
         <>
-            <AccountBalanceAtom balanceValue={accountBalance}/>
+            <AccountBalanceAtom balanceValue={accountInfo.balance}/>
         </>
     )
 }
