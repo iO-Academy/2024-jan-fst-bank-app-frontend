@@ -1,7 +1,6 @@
 import {useState} from "react";
 import {useEffect} from "react";
 import AccountBalanceAtom from "../../Atoms/AccountBalanceAtom";
-import TextBoxAtom from "../../Atoms/TextAtom";
 
 function CustomerBalance() {
 
