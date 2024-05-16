@@ -7,6 +7,10 @@ import AccountBalanceAtom from "./Components/Atoms/AccountBalanceAtom";
 import BackButtonAtom from "./Components/Atoms/BackButtonAtom";
 import HeaderAtom from "./Components/Atoms/HeaderAtom";
 import Transactions from "./Components/Molecules/TransactionMolecule";
+import DropdownMenuMolecule from "./Components/Molecules/DropdownMenuMolecule";
+import TextBoxAtom from "./Components/Atoms/TextAtom";
+import ButtonAtom from "./Components/Atoms/ButtonAtom";
+import TextInputAtom from "./Components/Atoms/TextInputAtom";
 
 function App() {
 

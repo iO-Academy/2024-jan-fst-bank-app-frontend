@@ -9,7 +9,7 @@
 function ButtonAtom(props: ButtonProps) {
     const {value, type, onClick, margin} = props
     return  (
-        <div className={"flex justify-center justify-items-center"}>
+        <div className={"flex justify-center justify-items-center mt-32"}>
         <button className={"border-1 border border-emerald-900 rounded-md p-2 bg-emerald-500 text-white m-" + margin}  type={type} onClick={onClick}>{value}</button>
         </div>
     )
