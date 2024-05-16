@@ -9,9 +9,9 @@ function HomePage() {
             <UserHeaderMolecule/>
             <AccountBalanceAtom accountType={"Current Account"} balanceValue={150.00} />
             <div className={"flex mt-20 justify-center"}>
-            <ButtonAtom value={"Add Account"} />
-            <ButtonAtom value={"Add Funds"} />
-            <ButtonAtom value={"Sign Out"} />
+                <ButtonAtom value={"Add Account"} margin={"ml-2 mr-2"} />
+                <ButtonAtom value={"Sign Out"} margin={"ml-2 mr-2"} />
+                <ButtonAtom value={"Add Funds"} margin={"ml-2"} />
             </div>
         </>
     )

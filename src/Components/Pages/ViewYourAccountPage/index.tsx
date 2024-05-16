@@ -5,9 +5,11 @@ import Transactions from "../../Molecules/TransactionMolecule";
 function ViewYourAccountPage() {
     return(
         <>
-            <BackButtonAtom />
-            <HeaderAtom mainHeader={"Your account transactions:"} />
-            <Transactions />
+            <BackButtonAtom/>
+            <div className={"flex justify-center flex-col items-center max-w-screen-xl"}>
+                <HeaderAtom mainHeader={"Your account transactions:"}/>
+                <Transactions/>
+            </div>
         </>
     )
 }
