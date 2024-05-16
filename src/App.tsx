@@ -7,15 +7,10 @@ import RegisterPage2 from "./Components/Pages/RegisterPage2";
 import RegisterPage3 from "./Components/Pages/RegisterPage3";
 import UserContext from "./Components/UserContext";
 import { useState } from "react";
-import AddFundsPage from "./Components/pages/AddFundsPage";
-import AccountBalanceAtom from "./Components/Atoms/AccountBalanceAtom";
-import AddAccountPage from "./Components/Pages/AddAccountPage";
-import AccountPage from "./Components/Pages/AccountPage";
 
 function App() {
     const [userInfo, setUserInfo] = useState({});
     return (
-        <>
         <UserContext.Provider value={{userInfo: userInfo, setUserInfo: setUserInfo}}>
             <BrowserRouter>
                 <Routes>
@@ -25,13 +20,9 @@ function App() {
                     <Route key={"Home"} path={"/home"} element={<HomePage />}></Route>
                     <Route key={"Register2"} path={"/register2"} element={<RegisterPage2 />}></Route>
                     <Route key={"Register3"} path={"/register3"} element={<RegisterPage3 />}></Route>
-                    <Route key={"AddFunds"} path={"/add"} element={<AddFundsPage />}></Route>
-                    <Route key={"AddAccount"} path={"/addAccount"} element={<AddAccountPage />}></Route>
-                    <Route key={"Account"} path={"/account"} element={<AccountPage />}></Route>
                 </Routes>
             </BrowserRouter>
         </UserContext.Provider>
-        </>
     )
 }
 

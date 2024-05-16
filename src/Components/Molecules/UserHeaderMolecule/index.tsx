@@ -4,7 +4,9 @@ import HeaderAtom from "../../Atoms/HeaderAtom";
 
 function UserHeader() {
 
-    const [customerName, setCustomerName] = useState('Liz')
+    //placeholder to show that this is for testing/placeholder
+    //change to empty string when ready
+    const [customerName, setCustomerName] = useState('TEST')
 
     // The below function will be implemented when the API is complete
 

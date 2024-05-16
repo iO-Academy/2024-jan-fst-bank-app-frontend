@@ -4,8 +4,6 @@ import ButtonAtom from "../../Atoms/ButtonAtom";
 import {useContext} from "react";
 import UserContext from "../../UserContext";
 
-
-
 function RegisterFormMolecule() {
 
     const navigate = useNavigate();
