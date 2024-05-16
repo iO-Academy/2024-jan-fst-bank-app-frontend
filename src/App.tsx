@@ -5,8 +5,14 @@ import IndexPage from "./Components/Pages/IndexPage";
 import HomePage from "./Components/Pages/HomePage";
 import AddFundsPage from "./Components/pages/AddFundsPage";
 import AccountBalanceAtom from "./Components/Atoms/AccountBalanceAtom";
+<<<<<<< transactionAtomAndMolecule
+import BackButtonAtom from "./Components/Atoms/BackButtonAtom";
+import HeaderAtom from "./Components/Atoms/HeaderAtom";
+import Transactions from "./Components/Molecules/TransactionMolecule";
+=======
 import AddAccountPage from "./Components/Pages/AddAccountPage";
 import AccountPage from "./Components/Pages/AccountPage";
+>>>>>>> Story3
 
 function App() {
 
