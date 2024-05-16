@@ -4,6 +4,9 @@ import RegisterPage from "./Components/Pages/RegisterPage";
 import IndexPage from "./Components/Pages/IndexPage";
 import HomePage from "./Components/Pages/HomePage";
 import AccountBalanceAtom from "./Components/Atoms/AccountBalanceAtom";
+import BackButtonAtom from "./Components/Atoms/BackButtonAtom";
+import HeaderAtom from "./Components/Atoms/HeaderAtom";
+import Transactions from "./Components/Molecules/TransactionMolecule";
 
 function App() {
 
