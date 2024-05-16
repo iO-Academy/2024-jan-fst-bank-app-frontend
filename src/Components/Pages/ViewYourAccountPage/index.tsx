@@ -1,6 +1,7 @@
 import BackButtonAtom from "../../Atoms/BackButtonAtom";
 import HeaderAtom from "../../Atoms/HeaderAtom";
 import Transactions from "../../Molecules/TransactionMolecule";
+import {useNavigate} from "react-router-dom";
 
 function ViewYourAccountPage() {
     return(
