@@ -1,4 +1,5 @@
 import ButtonAtom from "../../Atoms/ButtonAtom";
+import RegistrationMolecule from "../../Molecules/RegistrationMolecule";
 
 function RegisterPage() {
     return (
