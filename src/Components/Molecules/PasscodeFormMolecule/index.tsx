@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import ButtonAtom from "../../Atoms/ButtonAtom";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import UserContext from "../../UserContext";
 
 function PasscodeFormMolecule() {
@@ -19,6 +19,7 @@ function PasscodeFormMolecule() {
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(userInfo)
             });
+            localStorage.setItem("registered", "true")
             setUserInfo(userInfo)
             navigate('/home')
         }
