@@ -1,27 +1,32 @@
 import { useForm } from "react-hook-form";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ButtonAtom from "../../Atoms/ButtonAtom";
-import {Simulate} from "react-dom/test-utils";
-import submit = Simulate.submit;
+import {useContext} from "react";
+import UserContext from "../../UserContext";
+
+
 
 function RegisterFormMolecule() {
 
+    const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
+    const { setUserInfo } = useContext(UserContext)
+
     const handleRegistration = (data) => {
-        for (const [key, value] of Object.entries(data)) {
-            document.cookie = `${key}=${value}`;
-        }
+            setUserInfo(data);
+            navigate('/register3')
     }
+
     return (
         <>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit(handleRegistration)}>
-                <input type="text" name="firstName" placeholder="Fist Name" {...register('firstName', {required: true})}/>
+                <input type="text" name="first_name" placeholder="Fist Name" {...register('first_name', {required: true})}/>
                 <br/>
-                <input type="text" name="lastName" placeholder="Last Name" {...register('lastName', {required: true})}/>
+                <input type="text" name="last_name" placeholder="Last Name" {...register('last_name', {required: true})}/>
                 <br/>
                 <input type="email" name="email" placeholder="Email"{...register('email', {required: true})}/>
                 <br/>
-                <ButtonAtom value="submit"></ButtonAtom>
+                <ButtonAtom value="register" type = "submit"></ButtonAtom>
             </form>
         </>
 
