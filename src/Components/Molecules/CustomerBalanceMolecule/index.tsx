@@ -6,7 +6,7 @@ function CustomerBalance() {
 
     const [accountInfo, setAccountInfo] = useState(0)
     const getAccountInfo = () => {
-        fetch()
+        fetch("localhost:3000")
             .then(response => response.json())
             .then(accountInformation => {
                 setAccountInfo(accountInformation)
