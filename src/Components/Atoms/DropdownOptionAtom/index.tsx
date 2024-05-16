@@ -1,8 +1,9 @@
-interface AccountOption {
+interface AccountOptionProp {
     accountOption: string
 }
 
-function DropdownOptionAtom ({accountOption}: AccountOption) {
+function DropdownOptionAtom (props: AccountOptionProp) {
+    const {accountOption} = props
     return (
         <option>{accountOption}</option>
     )

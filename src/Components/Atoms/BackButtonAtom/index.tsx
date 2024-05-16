@@ -11,5 +11,4 @@ function BackButtonAtom(props: BackButtonProps) {
     )
 }
 
-
 export default BackButtonAtom
