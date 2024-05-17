@@ -10,16 +10,16 @@ function UserHeader() {
 
     // The below function will be implemented when the API is complete
 
-    // const getCustomerName = () => {
-    //     fetch()
-    //         .then(response => response.json())
-    //         .then(customerName => {
-    //             setCustomerName(customerName.first_name)
-    //         })
-    //
-    //     useEffect(getCustomerName, [])
+    const getCustomerName = () => {
+        fetch()
+            .then(response => response.json())
+            .then(customerName => {
+                setCustomerName(customerName.first_name)
+            })
 
-    // }
+        useEffect(getCustomerName, [])
+
+    }
     return (
             <HeaderAtom mainHeader={'Welcome back, ' + customerName}/>
     )

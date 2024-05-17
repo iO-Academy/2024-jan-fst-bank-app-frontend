@@ -554,9 +554,24 @@ video {
   --tw-contain-style:  ;
 }
 
-.mx-96 {
-  margin-left: 24rem;
-  margin-right: 24rem;
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mr-20 {
@@ -567,8 +582,16 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
 }
 
 .mt-5 {
@@ -585,6 +608,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .flex-col {
@@ -617,6 +644,10 @@ video {
 
 .border {
   border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border-emerald-900 {
