@@ -1,27 +1,13 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {useEffect} from "react";
 import HeaderAtom from "../../Atoms/HeaderAtom";
+import UserContext from "../../UserContext";
 
 function UserHeader() {
+    const {userInfo} = useContext(UserContext)
 
-    //placeholder to show that this is for testing/placeholder
-    //change to empty string when ready
-    const [customerName, setCustomerName] = useState('TEST')
-
-    // The below function will be implemented when the API is complete
-
-    const getCustomerName = () => {
-        fetch()
-            .then(response => response.json())
-            .then(customerName => {
-                setCustomerName(customerName.first_name)
-            })
-
-        useEffect(getCustomerName, [])
-
-    }
     return (
-            <HeaderAtom mainHeader={'Welcome back, ' + customerName}/>
+            <HeaderAtom mainHeader={'Welcome back, ' + userInfo.firstName}/>
     )
 }
 
