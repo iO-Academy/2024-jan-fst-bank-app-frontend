@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useIdleTimer } from "react-idle-timer"
+
 /**
  * @param idleTime - number of seconds to wait before user is logged out
  */
@@ -7,7 +8,7 @@ const useIdleTimeout = ({idleTime = 1 }) => {
     const idleTimeout =  idleTime;
     const [isIdle, setIdle] = useState(false)
     const logout = () => {
-        localStorage.removeItem('registered')
+        sessionStorage.removeItem('token')
     }
     const handleIdle = () => {
         setIdle(true)

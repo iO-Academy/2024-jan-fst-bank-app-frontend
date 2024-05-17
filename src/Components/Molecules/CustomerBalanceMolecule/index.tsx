@@ -12,7 +12,10 @@ interface IAccountInfo {
 function CustomerBalance() {
     const [accountInfo, setAccountInfo] = useState<IAccountInfo>({})
     const getAccountInfo = () => {
-        fetch('http://localhost:3000/user/' + 127098373986)
+        fetch('http://localhost:3000/user/' + sessionStorage.getItem('customerNumber'), {
+            method: 'GET',
+            headers: {'Content-Type': "application/json", "Authorization": 'Bearer ' + sessionStorage.getItem('token')},
+        })
             .then(response => response.json())
             .then(accountInformation => {
                 setAccountInfo(accountInformation.accounts[0])

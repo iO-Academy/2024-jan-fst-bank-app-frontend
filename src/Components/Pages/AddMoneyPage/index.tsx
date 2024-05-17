@@ -18,7 +18,7 @@ function AddMoneyPage() {
 
             await fetch(`http://localhost:3000/user/${customer_number}`, {
                 method: 'GET',
-                headers: {'Content-Type': "application/json", "Authorization": sessionStorage.token},
+                headers: {'Content-Type': "application/json", "Authorization": 'Bearer ' + sessionStorage.getItem('token')},
             })
                 .then(response => response.json())
                 .then(response => {if(response.success === true){
