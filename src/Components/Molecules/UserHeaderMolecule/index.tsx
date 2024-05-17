@@ -6,7 +6,7 @@ function UserHeader() {
 
     //placeholder to show that this is for testing/placeholder
     //change to empty string when ready
-    const [customerName, setCustomerName] = useState('TEST')
+    const [customerName, setCustomerName] = useState('User')
 
     // The below function will be implemented when the API is complete
 

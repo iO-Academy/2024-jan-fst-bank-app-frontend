@@ -11,7 +11,7 @@ import {useEffect, useState} from "react";
 function AddMoneyPage() {
 
     const [accounts, setAccounts] = useState<string[]>([])
-    const custNo: string = sessionStorage.getItem('customer_number') || '127098373986'
+    const custNo: string = sessionStorage.getItem('customerNumber') || '127098373986'
 
     useEffect(() => {
         async function fetchData (customer_number: string): Promise<T> {
