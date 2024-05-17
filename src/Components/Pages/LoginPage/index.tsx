@@ -10,18 +10,20 @@ function LoginPage() {
         formState : { errors } } = useForm();
 
     const handleSubmitLogin = async (data) => {
+        const customerNumber = sessionStorage.getItem('customerNumber');
         await fetch("http://localhost:3000/login", {
             method: 'POST',
             headers: {'Content-Type': "application/json"},
-            body: JSON.stringify({"passcode": data.loginPasscode, "customer_number": 123321234543})
+            body: JSON.stringify({"passcode": data.loginPasscode, "customer_number": customerNumber})
         })
             .then(response => response.json())
-            .then(response => {if(response.customer_number){
+            .then(response =>
+            {if (response.message == "Login successful"){
                sessionStorage.setItem("token", response.token)
                 navigate('/home')
             }
             else{
-                alert(response.message)
+                alert("Incorrect log-in details")
             }
             })
     }
