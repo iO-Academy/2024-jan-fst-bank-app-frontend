@@ -24,7 +24,7 @@ function PasscodeFormMolecule() {
             sessionStorage.setItem("customerNumber", data.customerNumber)
             localStorage.setItem("registered", "true")
 
-            navigate('/home')
+            navigate('/login')
         }
         else {
             alert("Passcodes do not match");
