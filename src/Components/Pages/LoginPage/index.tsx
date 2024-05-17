@@ -31,22 +31,24 @@ function LoginPage() {
         <>
             <BackButtonAtom visibility={"invisible"}/>
             <form onSubmit={handleSubmit(handleSubmitLogin)}>
-                <h3>Enter your 6 digit passcode:</h3>
-                <input type="number" name="loginPasscode" placeholder="passcode" {...register('loginPasscode',
-                    {required: true, minLength: 6, maxLength: 6})}></input>
-                {errors.passcode && errors.passcode.type === "required" && (
-                    <span>This is required</span>
-                )}
-                {errors.passcode && errors.passcode.type === "minLength" && (
-                    <span>Passcode must be 6 characters</span>
-                )}
-                {errors.passcode && errors.passcode.type === "maxLength" && (
-                    <span>Passcode must be 6 characters</span>
-                )}
-                <ButtonAtom value="login" type="submit"></ButtonAtom>
+                <h3 className="font-serif text-lg text-center mt-10 text-emerald-800">Enter your 6 digit passcode:</h3>
+                <div className={"flex justify-center justify-items-center "}>
+                    <input className="font-serif text-lg border-2 border-emerald-900 rounded-md p-1 mt-10" type="number" name="loginPasscode" placeholder="Passcode" {...register('loginPasscode',
+                        {required: true, minLength: 6, maxLength: 6})}></input>
+                </div>
+                    {errors.passcode && errors.passcode.type === "required" && (
+                        <span>This is required</span>
+                    )}
+                    {errors.passcode && errors.passcode.type === "minLength" && (
+                        <span>Passcode must be 6 characters</span>
+                    )}
+                    {errors.passcode && errors.passcode.type === "maxLength" && (
+                        <span>Passcode must be 6 characters</span>
+                    )}
+                    <ButtonAtom value="Log in" type="submit"></ButtonAtom>
             </form>
         </>
-    )
+)
 }
 
 export default LoginPage
