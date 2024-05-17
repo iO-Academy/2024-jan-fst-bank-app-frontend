@@ -10,9 +10,13 @@ import { useState } from "react";
 import AddMoneyPage from "./Components/Pages/AddMoneyPage";
 import ViewYourAccountPage from "./Components/Pages/ViewYourAccountPage";
 import LoginPage from "./Components/Pages/LoginPage";
+import useIdleTimer from "./utilities/IdleTimer.tsx";
 
 function App() {
     const [userInfo, setUserInfo] = useState({});
+
+    useIdleTimer({idleTime: 10000})
+
     return (
         <UserContext.Provider value={{userInfo: userInfo, setUserInfo: setUserInfo}}>
             <BrowserRouter>
