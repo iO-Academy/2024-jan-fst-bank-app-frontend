@@ -18,13 +18,13 @@ function RegisterFormMolecule() {
     return (
         <>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit(handleRegistration)}>
-                <input type="text" name="first_name" placeholder="Fist Name" {...register('first_name', {required: true})}/>
                 <br/>
-                <input type="text" name="last_name" placeholder="Last Name" {...register('last_name', {required: true})}/>
+                <input className={"border-2 border-emerald-900 rounded-md p-1"} type="text" name="first_name" placeholder="First Name" {...register('first_name', {required: true})}/>
                 <br/>
-                <input type="email" name="email" placeholder="Email"{...register('email', {required: true})}/>
+                <input className={"border-2 border-emerald-900 rounded-md p-1"} type="text" name="last_name" placeholder="Last Name" {...register('last_name', {required: true})}/>
                 <br/>
-                <ButtonAtom value="register" type = "submit"></ButtonAtom>
+                <input className={"border-2 border-emerald-900 rounded-md p-1"} type="email" name="email" placeholder="Email"{...register('email', {required: true})}/>
+                <ButtonAtom value="Register" type = "submit"></ButtonAtom>
             </form>
         </>
 
