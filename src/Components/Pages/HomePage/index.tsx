@@ -12,10 +12,15 @@ function HomePage() {
         <>
             <BackButtonAtom visibility={"invisible"}/>
             <UserHeaderMolecule/>
+
             <CustomerBalanceMolecule />
+
             <div className={"flex mt-20 justify-center"}>
-                <ButtonAtom value={"Sign Out"} margin={"ml-2 mr-2"} />
-                <ButtonAtom value={"Add Funds"} margin={"ml-2"} onClick={() => navigate("/addMoney")} />
+                <ButtonAtom value={"Sign Out"} margin={"ml-2 mr-2"} onClick={() => {
+                    sessionStorage.removeItem("token")
+                    navigate("/login")
+                }}/>
+                <ButtonAtom value={"Add Funds"} margin={"ml-2"} onClick={() => navigate("/addMoney")}/>
             </div>
         </>
     )

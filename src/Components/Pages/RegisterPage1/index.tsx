@@ -9,7 +9,7 @@ function RegisterPage1() {
             <div className="flex items-center justify-center h-screen">
                 <div className="flex flex-col h-2/4 justify-between p-5 drop-shadow-2xl">
                     <HeaderAtom mainHeader={"Welcome to Fetch Bank"}></HeaderAtom>
-                    <ButtonAtom value = "register" type = "submit" onClick={() => navigate('/register2')}></ButtonAtom>
+                    <ButtonAtom value = "Register" type = "submit" onClick={() => navigate('/register2')}></ButtonAtom>
                 </div>
             </div>
         </>

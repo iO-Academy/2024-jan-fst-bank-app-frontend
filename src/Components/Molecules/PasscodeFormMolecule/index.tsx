@@ -34,8 +34,8 @@ function PasscodeFormMolecule() {
     return (
         <>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit(handleSubmitPasscode)}>
-                <h3>Please provide a memorable 6 digit passcode</h3>
-                <input type="number" name="passcode" placeholder="passcode" {...register('passcode', {required: true, minLength:6, maxLength:6})}/>
+                <h3 className="font-serif text-lg p-1">Please provide a memorable 6 digit passcode</h3>
+                <input className={"border-2 border-emerald-900 rounded-md p-1"} type="number" name="passcode" placeholder="Passcode" {...register('passcode', {required: true, minLength:6, maxLength:6})}/>
                 {errors.passcode && errors.passcode.type === "required" && (
                     <span>This is required</span>
                 )}
@@ -46,8 +46,8 @@ function PasscodeFormMolecule() {
                     <span>Passcode must be 6 characters</span>
                 )}
                 <br/>
-                <h3>Please confirm your passcode</h3>
-                <input type="number" name="passcodeConfirm" placeholder="passcodeConfirm" {...register('passcodeConfirm', {required: true, minLength:6, maxLength:6})}/>
+                <h3 className="font-serif text-lg p-1">Please confirm your passcode</h3>
+                <input className={"border-2 border-emerald-900 rounded-md p-1"} type="number" name="passcodeConfirm" placeholder="Confirm Passcode" {...register('passcodeConfirm', {required: true, minLength:6, maxLength:6})}/>
                 {errors.passcodeConfirm && errors.passcodeConfirm.type === "required" && (
                     <span>This is required</span>
                 )}
@@ -57,8 +57,7 @@ function PasscodeFormMolecule() {
                 {errors.passcodeConfirm && errors.passcodeConfirm.type === "maxLength" && (
                     <span>Passcode must be 6 characters</span>
                 )}
-                <br/>
-                <ButtonAtom value="register" type = "submit"></ButtonAtom>
+                <ButtonAtom value="Register" type = "submit"></ButtonAtom>
             </form>
         </>
 
