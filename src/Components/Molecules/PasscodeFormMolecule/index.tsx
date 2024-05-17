@@ -12,15 +12,18 @@ function PasscodeFormMolecule() {
 
     const handleSubmitPasscode = async (data) => {
         if (data.passcode == data.passcodeConfirm) {
-            userInfo['passcode'] = (data.passcode).toString()
-            console.log(userInfo)
-            await fetch('http://localhost:3000/register', {
+            userInfo['passcode'] = (data.passcode).toString();
+            const response = await fetch('http://localhost:3000/register', {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(userInfo)
             });
+            data = await response.json();
+            userInfo['passcode'] = '';
+            userInfo['customerNumber'] = data.customerNumber
+            sessionStorage.setItem("customerNumber", data.customerNumber)
             localStorage.setItem("registered", "true")
-            setUserInfo(userInfo)
+
             navigate('/home')
         }
         else {
